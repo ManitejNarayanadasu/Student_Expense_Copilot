@@ -35,7 +35,7 @@ traditional data processing, algorithms, and AI where each is most useful.
 
 ## 🏗️ Current Architecture
 
-The current implementation focuses on the first stage of the data pipeline.
+The current implementation focuses on the initial data processing pipeline.
 
 ```text
 Bank CSV
@@ -47,7 +47,10 @@ CSV Ingestion
 Pandas DataFrame
    │
    ▼
-Transaction Processing
+Data Cleaning & Validation
+   │
+   ▼
+Structured Transactions
    │
    ▼
 Future Database
