@@ -1,9 +1,11 @@
+import pandas as pd
 from src.ingestion import load_transactions
 from src.cleaning import (
     validate_columns,
     clean_transactions,
     validate_values
 )
+from src.categorisation import categorise_transaction
 
 
 # Load raw transactions
@@ -28,3 +30,12 @@ print(transactions)
 
 print("\nData types:")
 print(transactions.dtypes)
+
+#Catergorise data
+categorised_results = transactions["Description"].apply(categorise_transaction)
+
+transactions["Category"] = categorised_results.apply(lambda result: result[0])
+transactions["Subcategory"] = categorised_results.apply(lambda result: result[1])
+
+print(transactions[["Description", "Category", "Subcategory"]])
+                                 
