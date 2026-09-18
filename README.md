@@ -50,7 +50,19 @@ Pandas DataFrame
 Data Cleaning & Validation
    │
    ▼
+Transaction Categorisation
+   │
+   ▼
+Recurring Payment Detection
+   │
+   ▼
 Structured Transactions
    │
    ▼
 Future Database
+   │
+   ▼
+Spending Insights
+   │
+   ▼
+Future AI Analysis
